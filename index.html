@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Banner Carousel</title>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">My Website</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <picture>
+                    <source srcset="images/image1.webp" type="image/webp">
+                    <img src="images/image1.jpg" alt="Banner 1" loading="lazy">
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source srcset="images/image2.webp" type="image/webp">
+                    <img src="images/image2.jpg" alt="Banner 2" loading="lazy">
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source srcset="images/image3.webp" type="image/webp">
+                    <img src="images/image3.jpg" alt="Banner 3" loading="lazy">
+                </picture>
+            </div>
+        </div>
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
