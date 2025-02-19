@@ -1,3 +1,14 @@
+/* 基本样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
 /* 导航栏样式 */
 .navbar {
     display: flex;
@@ -20,6 +31,25 @@
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+}
+
+/* 导航栏在小屏设备的适配 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+    .nav-links a {
+        font-size: 16px;
+    }
 }
 
 /* 轮播图样式 */
@@ -42,8 +72,17 @@
 .carousel-item img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
+/* 针对小屏设备优化轮播图 */
+@media (max-width: 480px) {
+    .carousel-item img {
+        object-fit: contain;  /* 确保图片不会裁剪，显示完整 */
+    }
+}
+
+/* 轮播图左右按钮样式 */
 .carousel-control {
     position: absolute;
     top: 50%;
@@ -63,13 +102,16 @@
     right: 10px;
 }
 
-/* 媒体查询，适配不同设备 */
+/* 多设备兼容样式 */
+
+/* 平板设备 */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
     }
 }
 
+/* 手机设备 */
 @media (max-width: 480px) {
     .navbar {
         padding: 10px;
